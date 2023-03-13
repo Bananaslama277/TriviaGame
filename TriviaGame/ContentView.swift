@@ -54,7 +54,8 @@ struct ContentView: View {
                     Spacer()
                     
                     Button {
-                        print("Button clicked")
+                        print("Button 1 clicked")
+                        subtitleIndex = 3
                     } label: {
                         Text(option1)
                             .font(.title)
@@ -66,7 +67,8 @@ struct ContentView: View {
                     Spacer()
                     
                     Button {
-                        print("Button clicked")
+                        print("Button 2 clicked")
+                        subtitleIndex = 2
                     } label: {
                         Text(option2)
                             .font(.title)
@@ -85,7 +87,8 @@ struct ContentView: View {
                     Spacer()
                     
                     Button {
-                        print("Button clicked")
+                        print("Button 3 clicked")
+                        subtitleIndex = 2
                     } label: {
                         Text(option3)
                             .font(.title)
@@ -97,7 +100,8 @@ struct ContentView: View {
                     Spacer()
                     
                     Button {
-                        print("Button clicked")
+                        print("Button 4 clicked")
+                        subtitleIndex = 2
                     } label: {
                         Text(option4)
                             .font(.title)
