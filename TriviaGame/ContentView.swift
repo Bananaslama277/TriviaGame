@@ -20,11 +20,12 @@ struct ContentView: View {
 @State var option2 = ""
 @State var option3 = ""
 @State var option4 = ""
-func showOptions(){
+    func showOptions(){
         option1 = "Led Zepplin"
-        option2 = "2"
-}
-
+        option2 = "Pink Floyd"
+        option3 = "Van Halen"
+        option4 = "Queen"
+    }
     
     var body: some View {
         ZStack{
@@ -55,7 +56,7 @@ func showOptions(){
                     Button {
                         print("Button clicked")
                     } label: {
-                        Text("")
+                        Text(option1)
                             .font(.title)
                             .foregroundColor(Color.white)
                             .frame(width: 150.0)
@@ -67,7 +68,7 @@ func showOptions(){
                     Button {
                         print("Button clicked")
                     } label: {
-                        Text("")
+                        Text(option2)
                             .font(.title)
                             .foregroundColor(Color.white)
                             .frame(width: 150.0)
@@ -86,7 +87,7 @@ func showOptions(){
                     Button {
                         print("Button clicked")
                     } label: {
-                        Text("")
+                        Text(option3)
                             .font(.title)
                             .foregroundColor(Color.white)
                             .frame(width: 150.0)
@@ -98,7 +99,7 @@ func showOptions(){
                     Button {
                         print("Button clicked")
                     } label: {
-                        Text("")
+                        Text(option4)
                             .font(.title)
                             .foregroundColor(Color.white)
                             .frame(width: 150.0)
