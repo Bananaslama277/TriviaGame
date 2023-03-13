@@ -1,14 +1,16 @@
-//
-//  ContentView.swift
-//  TriviaGame
-//
-//  Created by Matthew RIley on 3/13/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+
+@State var subtitleText = [
+"Click the START GAME button to begin",
+"Who wrote the song \"Stairway to Heaven\"?",
+"Sorry, wrong answer",
+"Correct!"
+]
     
+@State var subtitleIndex = 0
+
     var body: some View {
         ZStack{
 
@@ -25,7 +27,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Text("Click the START GAME button to begin")
+                Text(subtitleText[subtitleIndex])
                     .font(.title)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
