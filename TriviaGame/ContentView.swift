@@ -3,14 +3,23 @@ import SwiftUI
 struct ContentView: View {
 
 @State var subtitleText = [
-"Click the START GAME button to begin",
-"Who wrote the song \"Stairway to Heaven\"?",
-"Sorry, wrong answer",
-"Correct!"
+    "Click the START GAME button to begin",
+    "Who wrote the song \"Stairway to Heaven\"?",
+    "Sorry, wrong answer",
+    "Correct!"
 ]
-    
 @State var subtitleIndex = 0
 
+@State var bottomButton = [
+    "START GAME",
+    "NEXT QUESTION"
+]
+@State var bottomButtonIndex = 0
+    
+    func gameStart() {
+        print("gameStart ran")
+    }
+    
     var body: some View {
         ZStack{
 
@@ -99,8 +108,10 @@ struct ContentView: View {
                 
                 Button {
                     print("Button clicked")
+                    gameStart()
+                    
                 } label: {
-                    Text("START GAME")
+                    Text(bottomButton[bottomButtonIndex])
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
