@@ -15,10 +15,16 @@ struct ContentView: View {
     "NEXT QUESTION"
 ]
 @State var bottomButtonIndex = 0
-    
-    func gameStart() {
-        print("gameStart ran")
-    }
+
+@State var option1 = ""
+@State var option2 = ""
+@State var option3 = ""
+@State var option4 = ""
+func showOptions(){
+        option1 = "Led Zepplin"
+        option2 = "2"
+}
+
     
     var body: some View {
         ZStack{
@@ -107,9 +113,10 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
-                    print("Button clicked")
-                    gameStart()
-                    
+                    print("Start/Next button clicked")
+                    showOptions()
+                    bottomButtonIndex = 1
+                    subtitleIndex = 1
                 } label: {
                     Text(bottomButton[bottomButtonIndex])
                         .font(.largeTitle)
